@@ -90,7 +90,7 @@ if(plan !== 'premium'){
   }})
 }
 
-res.status(200).json({success: true, message: 'Article generated successfully',content})
+res.status(200).json({success: true, message: 'Blog title generated successfully',content})
 
   } catch (error) {
     console.log(error.message)
@@ -193,7 +193,7 @@ export const removeImageBackground = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'Image generated successfully',
+      message: 'Image background removed successfully',
       content: secure_url,
     });
   } catch (error) {
@@ -213,7 +213,7 @@ export const removeImageObject = async (req, res) => {
   try {
     const { userId } = req.auth();
     const { object } = req.body;
-    const { image } = req.file;
+    const image  = req.file;
 
     const plan = req.plan;
 
@@ -246,7 +246,7 @@ export const removeImageObject = async (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: 'Image generated successfully',
+      message: 'Object removed and image generated successfully',
       content: imageUrl,
     });
   } catch (error) {
@@ -309,7 +309,7 @@ const content = response.choices[0].message.content;
 
     res.status(200).json({
       success: true,
-      message: 'Image generated successfully',
+      message: 'Resume review  successfully',
       content: content,
     });
 

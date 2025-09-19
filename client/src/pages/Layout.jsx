@@ -13,7 +13,7 @@ const Layout = () => {
   return user ? (
     <div className="flex flex-col items-start justify-start h-screen">
       {/* Top Navbar */}
-      <nav className="w-full min-h-14 flex items-center justify-between px-8 border-b border-gray-200">
+      <nav className="w-full min-h-14 flex items-center justify-between px-8 border-b border-gray-200 ">
         <img
           src={assets.logo}
           alt=""
@@ -41,7 +41,7 @@ const Layout = () => {
   </div>
 
   {/* Sidebar - Mobile Overlay (fixed) */}
-  <div className="sm:hidden">
+  <div className="sm:hidden ">
     <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
   </div>
 

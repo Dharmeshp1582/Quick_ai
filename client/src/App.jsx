@@ -10,18 +10,16 @@ import RemoveBackground from './pages/RemoveBackground'
 import ReviewResume from './pages/ReviewResume'
 import Community from './pages/Community'
 import RemoveObject from './pages/RemoveObject'
-import { useAuth } from '@clerk/clerk-react'
-import { use } from 'react'
-import { useEffect } from 'react'
+import axios from 'axios'
+import { Toaster } from 'react-hot-toast'
 
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 const App = () => {
 
-  const {getToken} = useAuth()
-  useEffect(() => {
-    getToken().then((token) => console.log(token))
-  },[])
+  
   return (
     <>
+    <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/ai" element={<Layout />} >

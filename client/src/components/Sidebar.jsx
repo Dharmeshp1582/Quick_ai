@@ -51,7 +51,7 @@ const Sidebar = ({sidebar,setSidebar}) => {
    </div>
     </div>
    
-   <div className='w-full border-t border-gray-200 p-4 px-7 flex items-center justify-between'>
+   <div className='w-full border-t border-gray-200 p-4 px-7 flex items-center justify-between mb-12'>
 
    <div onClick={openUserProfile} className='flex gap-2 items-center cursor-pointer'>
     <img src={user.imageUrl} alt="" className='w-8 rounded-full' />

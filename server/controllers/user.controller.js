@@ -7,7 +7,7 @@ export const getUserCreations = async (req, res) => {
 
    const creations = await Creation.find({user_id: userId}).sort({created_at: -1});
 
-   return res.status(200).json({success: true, data: creations})
+   return res.status(200).json({success: true, message:'Getting user creations successfully', creations})
 
   } catch (error) {
     return res.status(500).json({success: false, message: error.message})
@@ -25,7 +25,7 @@ export const getPublishedCreations = async (req, res) => {
       return res.status(404).json({ success: false, message: "No creations found" });
     }
 
-    return res.status(200).json({ success: true, creations });
+    return res.status(200).json({ success: true,message: "Getting published creations successfully", creations });
   } catch (error) {
     res.json({ success: false, message: error.message });
   }
