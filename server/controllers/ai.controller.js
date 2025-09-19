@@ -163,7 +163,7 @@ export const generateImage = async (req, res) => {
 export const removeImageBackground = async (req, res) => {
   try {
     const { userId } = req.auth();
-    const { image } = req.file;
+    const image = req.file;
 
     const plan = req.plan;
 
@@ -312,7 +312,7 @@ const content = response.choices[0].message.content;
       message: 'Image generated successfully',
       content: content,
     });
-    
+
   } catch (error) {
     console.log(error.message);
     return res
