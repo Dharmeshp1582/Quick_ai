@@ -22,7 +22,7 @@ const Sidebar = ({sidebar,setSidebar}) => {
 
   return (
     <div
-  className={`w-60 h-screen fixed left-0 top-0 bg-white border-r border-gray-200 flex flex-col justify-between transition-all duration-300 ease-in-out
+  className={`w-60 h-screen fixed left-0 top-0 bg-white border-r border-gray-200 flex flex-col justify-between transition-all duration-300 ease-in-out mt-13.5
     ${sidebar ? 'translate-x-0' : 'max-sm:-translate-x-full'}
   `}
 >
